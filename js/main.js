@@ -4,11 +4,11 @@ function convertPersonagemToLi(personagem) {
     return `
         <li class="personagem">
 
-                    <div class="conteudo">
+            <div class="conteudo">
 
 
-                        <span class="name">${personagem.name}</span>
-                        <hr>
+                <span class="name">${personagem.name}</span>
+                    <hr>
 
                         <div class="detalhes">
 
@@ -20,28 +20,25 @@ function convertPersonagemToLi(personagem) {
                             <span class="actor">Actor<p>daniel</p></span>
 
 
-                        </div>
-
-
-                    </div>
-
-                    <div class="imagem-fundo">
-
-                        <img src="${personagem.image}" alt="">
-
                     </div>
 
 
-                </li>  
+            </div>
+
+            <div class="imagem-fundo">
+
+                    <img src="${personagem.image}" alt="Não existe -> ${personagem.name}">
+
+            </div>
+
+
+        </li>  
     `;
 }
 
-const listaPotters = document.getElementById("lista_personagens")
+const listaPotters = document.getElementById("lista-personagens")
 
 fetch(url)
     .then((response) => response.json())
-    .then((jsonResponse) => listaPotters.innerHTML += jsonResponse.map(convertPersonagemToLi).join(""))
-
-
-
-    
+    .then((jsonResponse) => listaPotters.innerHTML = jsonResponse.map(convertPersonagemToLi).join(""))
+    .catch((error) => console.log("Erro ao carregar os dados:", error));

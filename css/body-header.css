@@ -30,3 +30,38 @@ header {
 
     font-size: 28px;
 }
+
+
+/* BODY */
+
+.container-titulo {
+    background-color: #0E1A40;
+    
+    color: #FFDB00;
+    font-size: 1.8rem;
+    font-family: "Krona One";
+    text-align: center;
+    
+    border-radius: 20%;
+    
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+
+    border-start-end-radius: 15px;
+    border-start-start-radius: 15px;
+
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
+
+
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.container-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
