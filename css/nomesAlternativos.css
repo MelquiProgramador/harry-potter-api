@@ -1,0 +1,15 @@
+.nomesAlternativos {
+
+    display: inline-block;
+    animation: move 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@keyframes move{
+    0% {top: 0px;}
+    20% {top: -50px;}
+    40% {top: -100px;}
+    60% {top: -150px;}
+    80% {top: -200px;}
+}
